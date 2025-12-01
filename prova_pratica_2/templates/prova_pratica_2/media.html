@@ -1,0 +1,15 @@
+
+{% extends "base.html" %}
+
+{%block title%} {{block.super}} | Media {%endblock title %}
+
+
+
+{%block content%}
+
+    <b>lista= {{ lista }}</b>   </br>
+    il numero piu' grande nella lista è : <b> {{ massimo }} </b>  </br>
+    il numero piu' piccolo nella lista è :  <b> {{ minimo }} </b>  </br>
+    il numero centrale nella lista è : <b> {{ centrale }} </b>  </br>
+    la loro media è: <b> {{ media }} </b> </p>
+{%endblock content%}

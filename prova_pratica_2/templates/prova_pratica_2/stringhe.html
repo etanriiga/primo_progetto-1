@@ -1,0 +1,40 @@
+
+{% extends "base.html" %}
+
+
+{% block title %} {{block.super}} | Stringhe {% endblock title %}
+
+{% block content %}
+    {% for x in lista %}
+    <i>{{ forloop.counter }}</i> : {{ x }}<br>
+    {% endfor %}
+    <br>
+    <b> LISTA CON 10 PAROLE A CASO TRA QUELLE DELLA LISTA SOPRA</b> <br>
+
+    {% for x in altraLista %}
+    <i>{{ forloop.counter }}</i> : {{ x }}<br>
+    {% endfor %}
+        <br>
+
+    <br>
+        <br>
+    <b> LISTA PAROLE CON PIU' DI 5 LETTERE </b>   <br>
+
+    {% for x in listaMagg %}
+    <i>{{ forloop.counter }}</i> : {{ x }}<br>
+    {% endfor %}
+
+
+        <br>
+    <br>
+    <b> LISTA PAROLE CON MENO DI 5 LETTERE  </b>   <br>
+
+    {% for x in listaMin %}
+    <i>{{ forloop.counter }}</i> :  {{ x }}<br>
+    {% endfor %}
+
+    <br>
+    IL NUMERO DI PAROLE CON PIU' DI 5 LETTERE E' : <b>{{ maggiore }} </b>  <br>
+    IL NUMERO DI PAROLE CON MENO DI 5 LETTERE E' : <b>{{ minore }}</b>
+
+{% endblock content %}
